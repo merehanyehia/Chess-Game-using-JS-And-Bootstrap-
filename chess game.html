@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./chessstyle.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+	<title>chess game</title>
+</head>
+
+<body>
+
+<button id="btn" onclick="start();">Start The Game</button>
+	<div  id="chessboard">
+		<!-- 1st -->
+	
+		<div id="a8" class="white">
+			<p>8</p>
+		</div>
+		<div id="b8" class="black"></div>
+		<div id="c8" class="white"></div>
+		<div id="d8" class="black"></div>
+		<div id="e8" class="white"></div>
+		<div id="f8" class="black"></div>
+		<div id="g8" class="white"></div>
+		<div id="h8" class="black"></div>
+		<!-- 2nd -->
+		<div id="a7" class="black">
+			<p>7</p>
+		</div>
+		<div id="b7" class="white"></div>
+		<div id="c7" class="black"></div>
+		<div id="d7" class="white"></div>
+		<div id="e7" class="black"></div>
+		<div id="f7" class="white"></div>
+		<div id="g7" class="black"></div>
+		<div id="h7" class="white"></div>
+		<!-- 3th -->
+		<div id="a6" class="white">
+			<p>6</p>
+		</div>
+		<div id="b6" class="black"></div>
+		<div id="c6" class="white"></div>
+		<div id="d6" class="black"></div>
+		<div id="e6" class="white"></div>
+		<div id="f6" class="black"></div>
+		<div id="g6" class="white"></div>
+		<div id="h6" class="black"></div>
+		<!-- 4st -->
+		<div id="a5" class="black">
+			<p>5</p>
+		</div>
+		<div id="b5" class="white"></div>
+		<div id="c5" class="black"></div>
+		<div id="d5" class="white"></div>
+		<div id="e5" class="black"></div>
+		<div id="f5" class="white"></div>
+		<div id="g5" class="black"></div>
+		<div id="h5" class="white"></div>
+		<!-- 5th -->
+		<div id="a4" class="white">
+			<p>4</p>
+		</div>
+		<div id="b4" class="black"></div>
+		<div id="c4" class="white"></div>
+		<div id="d4" class="black"></div>
+		<div id="e4" class="white"></div>
+		<div id="f4" class="black"></div>
+		<div id="g4" class="white"></div>
+		<div id="h4" class="black"></div>
+		<!-- 6th -->
+		<div id="a3" class="black">
+			<p>3</p>
+		</div>
+		<div id="b3" class="white"></div>
+		<div id="c3" class="black"></div>
+		<div id="d3" class="white"></div>
+		<div id="e3" class="black"></div>
+		<div id="f3" class="white"></div>
+		<div id="g3" class="black"></div>
+		<div id="h3" class="white"></div>
+		<!-- 7th -->
+		<div id="a2" class="white">
+			<p>2</p>
+		</div>
+		<div id="b2" class="black"></div>
+		<div id="c2" class="white"></div>
+		<div id="d2" class="black"></div>
+		<div id="e2" class="white"></div>
+		<div id="f2" class="black"></div>
+		<div id="g2" class="white"></div>
+		<div id="h2" class="black"></div>
+		<!-- 8th -->
+		<div id="a1" class="black">
+			<p>a1</p>
+			
+		</div>
+		<div id="b1" class="white">
+			<p>b</p>
+		</div>
+		<div id="c1" class="black">
+			<p>c</p>
+		</div>
+		<div id="d1" class="white">
+			<p>d</p>
+		</div>
+		<div id="e1" class="black">
+			<p>e</p>
+		</div>
+		<div id="f1" class="white">
+			<p>f</p>
+		</div>
+		<div id="g1" class="black">
+			<p>g</p>
+		</div>
+		<div id="h1" class="white">
+			<p>h</p>
+		</div>
+	</div>
+	<div class="footer" >
+		<img alt="" src="https://www.chess.com/bundles/web/images/user-image.007dad08.svg"
+			srcset="https://www.chess.com/bundles/web/images/user-image.007dad08.svg, https://www.chess.com/bundles/web/images/user-image.007dad08.svg 2x"
+			width="120" height="120" class="avatar-component sidebar-avatar">
+			<p id="score" style="color: white; margin-left: 23%; margin-top: -10%; font-size: 1.5rem; font-weight:bold;">0</p>
+
+			<div id="js_timer" style="display: inline;" ></div>
+			<div class="timer" style="display: inline;">
+				<p id="timer" style=" color: white; margin-top: -5%; margin-left: 70%; font-size: 1.5rem; font-weight:bold; display: inline;"> 00.0 
+				<br>
+				<div class="clock">
+					<div class="hand second" data-second-hand></div>
+					<div class="number number1"></div>
+					<div class="number number2"></div>
+					<div class="number number3"></div>
+					<div class="number number4"></div>
+					<div class="number number5"></div>
+					<div class="number number6"></div>
+					<div class="number number7"></div>
+					<div class="number number8"></div>
+					<div class="number number9"></div>
+					<div class="number number10"></div>
+					<div class="number number11"></div>
+					<div class="number number12"></div>
+				  </div>
+				
+				</p>
+						
+			</div>
+			<div id="rand" style="background-color: white; width: 90%; height:20%; margin-left: 5%; font-size: larger; text-align: center; font-weight: bold; "></div>
+			<div id="random"  style="color: wheat; display: none;">
+
+			</div>
+			<br><br><br><br><br>
+			<div  style="color: black; background-color: silver;">
+				<p  id="para" style="font-size: 1rem; color: green;">
+					
+					
+				<p id ="show" style="font-size: 1rem; color: green;"></p>
+			</p>
+					<p id="para2" style="font-size: 1rem ;color: red;">
+					<p id="show2" style="font-size: 1rem; color: red;"></p>
+					
+			</p>
+			
+
+
+			
+			</div>
+	</div>
+	<script src="./chess.js"></script>
+
+	<!-- <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"> -->
+</body>
+
+</html>

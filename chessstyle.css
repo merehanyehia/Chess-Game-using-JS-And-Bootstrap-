@@ -1,0 +1,190 @@
+#chessboard {
+    width: 640px;
+    height: 640px;
+
+    margin: 20px;
+    border: 25px solid #000;
+    margin-left: 7%;
+    margin-bottom: -20%;
+    opacity: 0.7;
+position: relative;
+}
+
+.black {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background-color:green;
+      font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    opacity: 1;
+}
+p{
+font-size: small;
+  
+}
+.white {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    font-size:50px;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    opacity: 1;
+}
+
+.footer{
+    width: 40%;
+    height: 60vh;
+    margin-left: 55%;
+    background-color: #000;
+    margin-top: -30%;
+    opacity: 0.7;
+}
+button{
+    z-index: 2;
+    position: absolute;
+margin-left: 62%;
+border-radius: 1rem;
+opacity: 0.7;
+background-color: silver;
+font-weight: bold;
+font-size: 3rem;
+color: rgba(0, 0, 0, 0.479);
+margin-top: 34%;
+cursor: pointer;
+border: none;
+}
+ 
+  
+  .clock {
+    width: 40px;
+    height: 40px;
+    background-color:#000;
+    border-radius: 50%;
+    border: 4px solid silver;
+    position: relative;
+    margin-left: 80%;
+    margin-top: -6%;
+  }
+  
+  .clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+  }
+  
+  .clock .number1 { --rotation: 30deg; }
+  .clock .number2 { --rotation: 60deg; }
+  .clock .number3 { --rotation: 90deg; }
+  .clock .number4 { --rotation: 120deg; }
+  .clock .number5 { --rotation: 150deg; }
+  .clock .number6 { --rotation: 180deg; }
+  .clock .number7 { --rotation: 210deg; }
+  .clock .number8 { --rotation: 240deg; }
+  .clock .number9 { --rotation: 270deg; }
+  .clock .number10 { --rotation: 300deg; }
+  .clock .number11 { --rotation: 330deg; }
+  
+  .clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+  
+  .clock::after {
+    content: '';
+    position: absolute;
+    background-color: silver;
+    z-index: 11;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .clock .hand.second {
+    width: 2px;
+    height: 45%;
+    background-color: silver;
+  }
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Background Styles Only */
+  
+  @import url('https://fonts.googleapis.com/css?family=Raleway');
+  
+  * {
+      font-family: Raleway;
+  }
+  
+  .side-links {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .side-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: white;
+    width: 180px;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  
+  .side-link-youtube {
+    background-color: red;
+  }
+  
+  .side-link-twitter {
+    background-color: #1DA1F2;
+  }
+  
+  .side-link-github {
+    background-color: #6e5494;
+  }
+  
+  .side-link-text {
+    margin-left: 10px;
+    font-size: 18px;
+  }
+  
+  .side-link-icon {
+    color: white;
+    font-size: 30px;
+  }
